@@ -1,6 +1,12 @@
 #ifndef SHAPEMAKER_H
 #define SHAPEMAKER_H
 
+#ifdef BUILDING_DLL
+#define DLL __declspec(dllexport)
+#else
+#define DLL __declspec(dllimport)
+#endif
+
 #include <iostream>
 #include <string>
 #include <vector>
@@ -17,7 +23,7 @@ using std::endl;
 //   V V    E       R   R     T     E        X X
 //    V     EEEEE   R   R     T     EEEEE   X   X
 
-class vertex
+class DLL vertex
 {
 public:
 
@@ -67,7 +73,7 @@ private:
 //      S   H   H   A   A   P       E
 //  SSSSS   H   H   A   A   P       EEEEE
 
-class shape
+class DLL shape
 {
 public:
 
@@ -145,7 +151,7 @@ private:
 //  C       U   U   B   B   O   O     I     D   D
 //   CCCC    UUU    BBBB     OOO    IIIII   DDDD
 
-class cuboid : public shape
+class DLL cuboid : public shape
 {
 public:
 
@@ -169,7 +175,7 @@ private:
 //    T     E         T     R   R   A   A   H   H   E       D   D   R   R   O   O   N  NN
 //    T     EEEEE     T     R   R   A   A   H   H   EEEEE   DDDD    R   R    OOO    N   N
 
-class tetrahedron : public shape
+class DLL tetrahedron : public shape
 {
 public:
 
