@@ -1,5 +1,5 @@
-#ifndef SHAPEMAKER_H
-#define SHAPEMAKER_H
+#ifndef SUPERSHAPEMAKER_H
+#define SUPERSHAPEMAKER_H
 
 #ifdef BUILDING_DLL
 #define DLL __declspec(dllexport)
